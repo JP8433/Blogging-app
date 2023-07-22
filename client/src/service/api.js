@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
   headers: {
     Accept: "application/json, form-data",
     "content-type": "application/json",
-    "Access-Control-Allow-Origin":"http://localhost:8000"
+   // "Access-Control-Allow-Origin":"http://localhost:8000"
   },
   
 });
@@ -92,7 +92,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       responseType: value.responseType,
       headers: {
         authorization: getAccessToken(),
-        "Access-Control-Allow-Origin":"http://localhost:8000"
+        //"Access-Control-Allow-Origin":"http://localhost:8000"
       },
       TYPE: getType(value, body),
       onUploadProgress: function (progressEvent) {
