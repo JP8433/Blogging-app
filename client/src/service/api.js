@@ -9,8 +9,9 @@ const axiosInstance = axios.create({
   headers: {
     Accept: "application/json, form-data",
     "content-type": "application/json",
+    "Access-Control-Allow-Origin":"http://localhost:8000"
   },
-  "Access-Control-Allow-Origin":"http://localhost:8000"
+  
 });
 
 axiosInstance.interceptors.request.use(
